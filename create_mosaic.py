@@ -11,13 +11,13 @@ import arcpy
 import os
 arcpy.env.overwriteOutput = True
 
-wksp = r'X:\\data\\rain' # average Tmax data
+wksp = r'X:\\data\\rain' # average data
 
 # Input settings to create mosaic dataset
 dataBase = r"C:\\GIS\\map\\map.gdb"
-mosaicName = "on_mos"
+mosaicName = "mosaic"
 mosaicPath = dataBase+"\\"+mosaicName
-coorSys = r"X:\\LCLU_files\\OUTPUT\\trends_11_11\\WGS84proj.prj"
+coorSys = r"X:\\data\\WGS84proj.prj"
 arcpy.env.workspace = wksp
 
 # Create mosaic dataset
