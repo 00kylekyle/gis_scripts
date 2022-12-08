@@ -3,7 +3,6 @@
 Title: add_fields
 Note: Creates a Mosaic Datset 
 """
-#import os
 import arcpy
 import os
 
