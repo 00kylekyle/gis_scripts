@@ -9,14 +9,14 @@ import arcpy
 import os
 from arcpy import env 
 from arcpy.sa import *
-arcpy.env.workspace = r'X:\\LCLU_files\\DATA\\CHIRPS_forKyle\\maximum'
+arcpy.env.workspace = r'X:\\data\\rain'
 arcpy.env.overwriteOutput = True
-wksp = 'X:\\LCLU_files\\DATA\\CHIRPS_forKyle\\maximum'
+wksp = 'X:\\data\\rain'
 
-outPath = 'X:\\LCLU_files\\OUTPUT\\trends_11_11\\max_null'
+outPath = 'X:\\output'
 # function to join path for file name in workspace
-def catPath(filename): 
-    return os.path.join(wksp, filename) 
+def catPath(fileName): 
+    return os.path.join(wksp, fileName) 
 
 numList = [num for num in range(1, 21)]
 yearList = []
