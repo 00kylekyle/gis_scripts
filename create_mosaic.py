@@ -11,12 +11,12 @@ import arcpy
 import os
 arcpy.env.overwriteOutput = True
 
-wksp = r'X:\\trends_11_11\\onset_null' # average Tmax data
+wksp = r'X:\\data\\rain' # average Tmax data
 
 # Input settings to create mosaic dataset
-daBse = r"C:\\GIS\\Work\\AUM_GIS\\Trends\\trends.gdb"
-mosName = "on_mos"
-mosPath = dataBase+"\\"+mosaicName
+dataBase = r"C:\\GIS\\map\\map.gdb"
+mosaicName = "on_mos"
+mosaicPath = dataBase+"\\"+mosaicName
 coorSys = r"X:\\LCLU_files\\OUTPUT\\trends_11_11\\WGS84proj.prj"
 arcpy.env.workspace = wksp
 
@@ -35,7 +35,7 @@ comment = "Add Raster Datasets" # commentary
 est_stats = "ESTIMATE_STATISTICS"
   
 arcpy.management.AddRastersToMosaicDataset(
-    mosPath, ras_type, in_path, cell_sizes, boundary, 
+    mosaicPath, ras_type, in_path, cell_sizes, boundary, 
     overview,"2", "#", "#", "#", "", "NO_SUBFOLDERS",
     "EXCLUDE_DUPLICATES", pyrmd, stats, 
     "BUILD_THUMBNAILS",comment,"FORCE_SPATIAL_REFERENCE", 
