@@ -12,10 +12,10 @@ import os
 
 arcpy.env.overwriteOutput = True
 
-wksp = r'X:\\trends_11_11\\onset_null'
+wksp = r'X:\\data\\rain'
 
 # Input settings for mosaic dataset
-mosaic = r"C:\\GIS\\Work\\AUM_GIS\\Trends\\trends.gdb\\on_mos"
+mosaic = r"C:\\GIS\\map.gdb\\mosaic"
 arcpy.env.workspace = wksp
 
 # Input settings for multidimensional info
