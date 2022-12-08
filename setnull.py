@@ -12,6 +12,7 @@ from arcpy.sa import *
 arcpy.env.workspace = r'X:\\LCLU_files\\DATA\\CHIRPS_forKyle\\maximum'
 arcpy.env.overwriteOutput = True
 wksp = 'X:\\LCLU_files\\DATA\\CHIRPS_forKyle\\maximum'
+
 outPath = 'X:\\LCLU_files\\OUTPUT\\trends_11_11\\max_null'
 # function to join path for file name in workspace
 def catPath(filename): 
