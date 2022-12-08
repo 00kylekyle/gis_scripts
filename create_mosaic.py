@@ -1,12 +1,8 @@
 # -*- coding: utf-8 -*-
 """
-Created on Fri Nov  4 11:19:49 2022
-For: Dr. Cuba
 Title: create_mosaic
 Note: Creates a Mosaic Datset 
-@author: kyleleuner
 """
-#import os
 import arcpy
 import os
 arcpy.env.overwriteOutput = True
@@ -33,7 +29,8 @@ pyrmd = "BUILD_PYRAMIDS"
 stats = "CALCULATE_STATISTICS"
 comment = "Add Raster Datasets" # commentary
 est_stats = "ESTIMATE_STATISTICS"
-  
+
+# Add rasters to mosaic dataset
 arcpy.management.AddRastersToMosaicDataset(
     mosaicPath, ras_type, in_path, cell_sizes, boundary, 
     overview,"2", "#", "#", "#", "", "NO_SUBFOLDERS",
