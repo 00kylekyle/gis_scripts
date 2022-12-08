@@ -1,10 +1,7 @@
 # -*- coding: utf-8 -*-
 """
-Created on Fri Nov  4 11:21:41 2022
-For: Dr. Cuba
 Title: add_fields
 Note: Creates a Mosaic Datset 
-@author: kyleleuner
 """
 #import os
 import arcpy
