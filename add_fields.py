@@ -13,17 +13,17 @@ import os
 arcpy.env.overwriteOutput = True
 
 # Input settings to create mosaic dataset
-daBse = r"C:\\GIS\\Work\\AUM_GIS\\Trends\\trends.gdb"
-mosName = "maxmosc"
-arcpy.env.workspace = daBse
+dataBase = r"C:\\GIS\\Work\\AUM_GIS\\Trends\\trends.gdb"
+mosaicName = "on_mos"
+arcpy.env.workspace = dataBase
 
 # Fields to add to mosaic dataset
 nuFld = "Year" # field name
 lngth = 10 # field length
 
 arcpy.management.AddField(
-    mosName, nuFld, "LONG", lngth , "", "",  nuFld, 
+    mosaicName, nuFld, "LONG", lngth , "", "",  nuFld, 
     "NULLABLE", "REQUIRED" )
     # calculate field
 arcpy.management.CalculateField(
-    mosName, "Year", ('!Name![-4:]'), "PYTHON3" )
+    mosaicName, "Year", ('!Name![-4:]'), "PYTHON3" )
