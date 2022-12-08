@@ -1,9 +1,7 @@
 # -*- coding: utf-8 -*-
 """
-Created on Mon Oct 17 16:41:42 2022
 Title: "setnull"
 Notes: set precipitation values from dataset to NoData
-@author: kyleleuner
 """
 import arcpy
 import os
@@ -18,6 +16,7 @@ outPath = 'X:\\output'
 def catPath(fileName): 
     return os.path.join(wksp, fileName) 
 
+# create a list of filenames with years as a string
 numList = [num for num in range(1, 21)]
 yearList = []
 for num in numList:
@@ -26,6 +25,7 @@ for num in numList:
     else:
         yearList.append('max_20' + str(num)+ '.tif')
 
+# set -9999 values to NoData 
 for x in yearList:  
     outNull = SetNull(catPath(x), catPath(x), "VALUE = -9999") 
     outNull.save(os.path.join(outPath, ("max" + x[-8:-4]+ ".tif")))
