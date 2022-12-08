@@ -11,17 +11,17 @@ import arcpy
 import os
 arcpy.env.overwriteOutput = True
 
-wksp = r'X:\\LCLU_files\\OUTPUT\\trends_11_11\\max_null' # average Tmax data
+wksp = r'X:\\trends_11_11\\onset_null' # average Tmax data
 
 # Input settings to create mosaic dataset
 daBse = r"C:\\GIS\\Work\\AUM_GIS\\Trends\\trends.gdb"
-mosName = "maxmosc"
-mosPath = daBse+"\\"+mosName
+mosName = "on_mos"
+mosPath = dataBase+"\\"+mosaicName
 coorSys = r"X:\\LCLU_files\\OUTPUT\\trends_11_11\\WGS84proj.prj"
 arcpy.env.workspace = wksp
 
 # Create mosaic dataset
-arcpy.management.CreateMosaicDataset(daBse, mosName, coorSys)
+arcpy.management.CreateMosaicDataset(dataBase, mosaicName, coorSys)
 
 # Input settings to add rasters to Mosaic Dataset
 in_path = wksp
