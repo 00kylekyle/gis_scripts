@@ -13,8 +13,8 @@ import os
 arcpy.env.overwriteOutput = True
 
 # Input settings to create mosaic dataset
-dataBase = r"C:\\GIS\\Work\\AUM_GIS\\Trends\\trends.gdb"
-mosaicName = "on_mos"
+dataBase = r"C:\\GIS\\map.gdb"
+mosaicName = "mosaic"
 arcpy.env.workspace = dataBase
 
 # Fields to add to mosaic dataset
