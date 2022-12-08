@@ -1,12 +1,8 @@
 # -*- coding: utf-8 -*-
 """
-Created on Fri Nov  4 11:23:30 2022
-For: Dr. Cuba
 Title: build_info
 Note: Builds multidimensional info in a mosaic
-@author: kyleleuner
 """
-#import os
 import arcpy
 import os
 
